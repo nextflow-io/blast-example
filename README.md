@@ -2,6 +2,8 @@
 
 A basic Blast pipeline using Nextflow 
 
+[![Build Status](https://travis-ci.org/nextflow-io/blast-example.svg?branch=master)](https://travis-ci.org/nextflow-io/blast-example)
+
 ## Get started 
 
 Install Nextflow 

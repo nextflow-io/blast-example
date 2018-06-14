@@ -1,3 +1,4 @@
 .git
 work
 .nextflow*
+git push -u origin master
