@@ -12,7 +12,7 @@ Install Nextflow
 
 Run the script 
 
-    ./nextflow run main -with-docker
+    nextflow run blast-example -with-docker
 
 ## Dependencies 
 
