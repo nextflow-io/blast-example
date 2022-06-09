@@ -16,5 +16,5 @@ Run the script
 
 ## Dependencies 
 
-* Java 8 or later 
+* Java 11 or later 
 * Docker 1.10 or later 
