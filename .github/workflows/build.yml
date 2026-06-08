@@ -1,0 +1,41 @@
+name: blast ci
+on: [push]
+
+jobs:
+  build:
+    name: blast ci
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        java_version: ['17']
+        nextflow_version: ['23.10']
+
+    steps:
+      - name: Environment
+        run: env | sort
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          submodules: true
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ matrix.java_version }}
+          architecture: x64
+
+      - name: Setup Nextflow ${{ matrix.nextflow_version }}
+        uses: nf-core/setup-nextflow@b9f764e8ba5c76b712ace14ecbfcef0e40ae2dd8 # v1
+        with:
+          version: "${{ matrix.nextflow_version }}"
+
+      - name: Tests
+        run: |
+          nextflow run . -profile docker
+        env:
+          NXF_ANSI_LOG: false
