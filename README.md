@@ -1,20 +1,24 @@
-# Blast example 
+# Blast example
 
-A basic Blast pipeline using Nextflow 
+A basic Blast pipeline using Nextflow.
 
-[![Build Status](https://travis-ci.org/nextflow-io/blast-example.svg?branch=master)](https://travis-ci.org/nextflow-io/blast-example)
+[![nextflow](https://img.shields.io/badge/nextflow-%E2%89%A523.10-brightgreen.svg)](http://nextflow.io)
 
-## Get started 
+## Get started
 
-Install Nextflow 
+Install Nextflow
 
-    curl https://get.nextflow.io | bash 
+```bash
+curl https://get.nextflow.io | bash
+```
 
-Run the script 
+Run the pipeline:
 
-    nextflow run blast-example -with-docker
+```bash
+nextflow run blast-example -profile docker
+```
 
-## Dependencies 
+## Dependencies
 
-* Java 11 or later 
-* Docker 1.10 or later 
+* Java 17 or later
+* Docker
