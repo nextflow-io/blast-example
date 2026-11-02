@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
       matrix:
         java_version: ['17']
-        nextflow_version: ['23.10']
+        nextflow_version: ['26.10']
 
     steps:
       - name: Environment
@@ -33,6 +33,9 @@ jobs:
         uses: nf-core/setup-nextflow@b9f764e8ba5c76b712ace14ecbfcef0e40ae2dd8 # v1
         with:
           version: "${{ matrix.nextflow_version }}"
+
+      - name: Lint
+        run: nextflow lint .
 
       - name: Tests
         run: |
