@@ -2,7 +2,7 @@
 
 A basic Blast pipeline using Nextflow, written with [static types](https://docs.seqera.io/nextflow/static-typing).
 
-[![nextflow](https://img.shields.io/badge/nextflow-%E2%89%A526.04-brightgreen.svg)](http://nextflow.io)
+[![nextflow](https://img.shields.io/badge/nextflow-%E2%89%A526.10-brightgreen.svg)](http://nextflow.io)
 
 ## Get started
 
@@ -31,6 +31,6 @@ The matching sequences are printed to the console and saved to `results/result.t
 
 ## Dependencies
 
-* Nextflow 26.04 or later
+* Nextflow 26.10 or later
 * Java 17 or later
 * Docker

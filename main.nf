@@ -29,10 +29,10 @@ nextflow.enable.types = true
  */
 params {
     // Query sequences (FASTA)
-    query: Path = "${projectDir}/data/sample.fa"
+    query: Path
 
     // BLAST database (directory and database name)
-    db: String = "${projectDir}/blast-db/pdb/tiny"
+    db: String
 
     // Name of the output file with the matching sequences
     out: String = "result.txt"
